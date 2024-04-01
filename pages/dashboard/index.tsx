@@ -1,11 +1,16 @@
+import Breadcrumb from "@/components/breadcrumb";
 import Layout from "@/components/layout";
+import Table from "@/components/table";
 
 export default function Dashboard() {
+  const listLinks = [{ name: "Dashboard", href: "/dashboard" }];
   return (
     <Layout>
-      <div className="h-[10000px] w-full flex flex-col">
-        <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-        <p className="text-gray-700">Welcome to the dashboard</p>
+      <div className="p-8">
+        <Breadcrumb listLinks={listLinks} title="Đơn hàng" />
+        <div className="mt-8">
+          <Table />
+        </div>
       </div>
     </Layout>
   );
