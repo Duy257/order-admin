@@ -1,5 +1,4 @@
-import Sidebar from "./sidebar";
-import Sidebar1 from "./sidebar1/sidebar1";
+import Sidebar1 from "./sidebar/sidebar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const routes = [
@@ -19,7 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   ];
   return (
     <>
-      <div className="flex">
+      <div className="flex bg-white">
         <Sidebar1 routes={routes} />
         <main className="h-screen overflow-auto w-screen">{children}</main>
       </div>
